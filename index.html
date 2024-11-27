@@ -17,11 +17,12 @@
 		let animation = lottie.loadAnimation({
 			container: document.getElementById('lottie'),
 			renderer: 'svg',
-			loop: false,
+			loop: true,
+			autoplay: true,
 			path: '/image/anim.json'
 		});
 		lottie.addEventListener('click', () => {
-			let loop = true;
+			let loop = false
 		})
 	</script>
 </body>

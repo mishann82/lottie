@@ -10,10 +10,11 @@
 
 <body>
 	<div class="container">
-		<div id="lottie"></div>
+		<div id="lottie" onclick="openModal()"></div>
 	</div>
 	<script src="/script/lottie.min.js"></script>
 	<script>
+		let state = 'play';
 		let animation = lottie.loadAnimation({
 			container: document.getElementById('lottie'),
 			renderer: 'svg',
@@ -21,9 +22,20 @@
 			autoplay: true,
 			path: '/image/anim.json'
 		});
-		lottie.addEventListener('click', () => {
-			let loop = false
-		})
+
+		/*
+				animation.goToAndStop(14, true);
+		
+				container.addEventListener('click', () => {
+					if (state === 'play') {
+						animation.playSegments([14, 28], true);
+						state = 'pause';
+					} else {
+						animation.playSegments([0, 14], true);
+						state = 'play';
+					}
+				});
+				*/
 	</script>
 </body>
 
